@@ -1,0 +1,105 @@
+<section class="text-gray-600">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-7xl text-4xl font-medium mb-4 text-gray-900">Text Extractor</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-xl">Extract or Scan text from images</p>
+        </div>
+
+        <div class="flex justify-center mb-8">
+            <button id="upload-btn" onclick="document.getElementById('formFile').click()" class="custom-btn shadow-md mb-2 flex items-center justify-center" style="width: 150px;">
+                Upload Img
+                <span class="ml-2">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
+                    </svg>
+                </span>
+            </button>
+            
+            
+            <form method="post" enctype="multipart/form-data" class="flex items-center ml-2">
+                <input name="imagefile" accept="image/*" type="file" id="formFile" style="display: none;">
+                <button type="submit" class="custom-btn shadow-md mb-2 flex items-center justify-center">Scan 
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 16">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m2.707 14.293 5.586-5.586a1 1 0 0 0 0-1.414L2.707 1.707A1 1 0 0 0 1 2.414v11.172a1 1 0 0 0 1.707.707Z"/>
+                </svg>
+
+                </button>
+            </form>
+           
+        </div>
+
+        <!-- Uploaded image -->
+
+         <!--
+        <div class="flex justify-center mb-8">
+            <img class="w-64 h-auto rounded-lg" src="data:image/png;base64, ">
+        </div>
+
+         -->
+        <!-- Uploaded image -->
+
+
+    </div>
+</section>
+
+  <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto flex flex-wrap">
+          <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+              <img id="svgs" alt="feature" class="image-slide object-center h-3/4 w-3/4"
+                  src="../assets/1.svg">
+          </div>
+          <!-- script to change svg change  -->
+          <script>
+              console.log('image.js');
+              var i = 0;
+              var image = document.getElementById('svgs');
+              var images = ['../assets/1.svg', '../assets/2.svg', '../assets/3.svg',
+                  '../assets/4.svg'
+              ];
+              setInterval(function () {
+                  i++;
+                  if (i >= 3) i = 0;
+                  image.src = images[i];
+
+
+              }, 3000);
+
+          </script>
+          <!-- script to change svg change  -->
+          <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
+              <div class="flex flex-col mb-10 lg:items-start items-center">
+                  <div
+                      class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-slate-300 text-slate-800 mb-5">
+                      <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6.072 10.072 2 2 6-4m3.586 4.314.9-.9a2 2 0 0 0 0-2.828l-.9-.9a2 2 0 0 1-.586-1.414V5.072a2 2 0 0 0-2-2H13.8a2 2 0 0 1-1.414-.586l-.9-.9a2 2 0 0 0-2.828 0l-.9.9a2 2 0 0 1-1.414.586H5.072a2 2 0 0 0-2 2v1.272a2 2 0 0 1-.586 1.414l-.9.9a2 2 0 0 0 0 2.828l.9.9a2 2 0 0 1 .586 1.414v1.272a2 2 0 0 0 2 2h1.272a2 2 0 0 1 1.414.586l.9.9a2 2 0 0 0 2.828 0l.9-.9a2 2 0 0 1 1.414-.586h1.272a2 2 0 0 0 2-2V13.8a2 2 0 0 1 .586-1.414Z"/>
+                    </svg>                  </div>
+
+                  <div class="flex-grow">
+                      <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Fast and Easy</h2>
+                      <p class="leading-relaxed text-base">Tesseract tests the text lines to determine whether
+                          they are fixed pitch. Where it finds fixed pitch text, Tesseract chops the words into
+                          characters using the pitch, and disables the chopper and associator on these words for
+                          the word recognition step.</p>
+                  </div>
+              </div>
+              <div class="flex flex-col mb-10 lg:items-start items-center">
+                  <div
+                      class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-slate-300 text-slate-800 mb-5">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                          <circle cx="6" cy="6" r="3"></circle>
+                          <circle cx="6" cy="18" r="3"></circle>
+                          <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                      </svg>
+                  </div>
+                  <div class="flex-grow">
+                      <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Accuracy</h2>
+                      <p class="leading-relaxed text-base">Easily crop the text from images and copy it to
+                          clipboard, And its Results are Highly Accurate</p>
+
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </section>
